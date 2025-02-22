@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4F86C6, #2F6BA3, #0A2740);/* تدرج ألوان أزرق أغمق وأعمق */
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* تنسيق الشعار */
+        .logo img {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* تنسيق روابط النافبار */
+        .nav-links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            gap: 50px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #143D60;
+        }
+
+        /* القائمة الجانبية */
+        .list-container {
+            position: relative;
+        }
+
+        .list-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .list-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background: rgba(20, 61, 96, 0.8); /* اللون الذي طلبته */
+            color: #fff;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 220px;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+            border: 2px solid #143D60; /* إضافة خط حول القائمة */
+        }
+
+        .list-content.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .list-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-content ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ffffff; /* إضافة خط بين العناصر */
+        }
+
+        .list-content ul li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 8px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .list-content ul li a:hover {
+            color: #143D60;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+
+        h1 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .activities {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 30px;
+        }
+
+        .activity {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .activity h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .activity-images {
+            display: flex;
+            gap: 15px;
+            overflow-x: scroll; /* تمكين التمرير الأفقي */
+            padding-bottom: 10px;
+            scroll-snap-type: x mandatory; /* ضبط سكرول الصور */
+        }
+
+        .activity-images img {
+            height: 250px; /* زيادة حجم الصور */
+            width: 350px; /* زيادة عرض الصور */
+            object-fit: cover; /* لتحديد كيفية ملء الصورة */
+            border-radius: 8px;
+            box-shadow: none; /* إزالة الظل حول الصور */
+            transition: transform 0.3s ease;
+            scroll-snap-align: start; /* محاذاة الصور في بداية العنصر */
+        }
+
+        .activity-images img:hover {
+            transform: scale(1.1); /* تكبير الصورة عند hover */
+        }
+
+        
+footer {
+            background-color: #143d60; /* أزرق داكن */
+            text-align: center;
+            padding: 6px 0;
+            font-size: 9px;
+            color: white;
+            margin-top: auto;
+            border-top: 2px solid #0d47a1; /* أزرق داكن */
+        }
+    

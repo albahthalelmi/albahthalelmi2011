@@ -1,0 +1,224 @@
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4F86C6, #2F6BA3, #0A2740);/* تدرج ألوان أزرق أغمق وأعمق */
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* تنسيق الشعار */
+        .logo img {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* تنسيق روابط النافبار */
+        .nav-links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            gap: 50px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #143D60;
+        }
+
+        /* القائمة الجانبية */
+        .list-container {
+            position: relative;
+        }
+
+        .list-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .list-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background: rgba(20, 61, 96, 0.8); /* اللون الذي طلبته */
+            color: #fff;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 220px;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+            border: 2px solid #143D60; /* إضافة خط حول القائمة */
+        }
+
+        .list-content.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .list-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-content ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ffffff; /* إضافة خط بين العناصر */
+        }
+
+        .list-content ul li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 8px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .list-content ul li a:hover {
+            color: #143D60;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            background: transparent;
+            padding: 30px;
+            box-shadow: none;
+        }
+
+        .title {
+            font-size: 30px;
+            color: #0d47a1; /* اللون الأزرق الداكن */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .level {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background: #0d47a1; /* أزرق داكن */
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            min-width: 100px;
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            background-color: #3b8d99; /* تغيير اللون عند التمرير */
+            transform: scale(1.05);
+        }
+
+        .box.manager {
+            background: #1e88e5; /* لون مختلف للمدراء */
+            min-width: 180px;
+            font-size: 16px;
+            padding: 15px;
+            height: 90px;
+        }
+
+        .departments {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .department {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 12%; /* يجعل ٧ أعمدة متجاورة */
+            background: transparent;
+        }
+
+        .department-title {
+            background: #1e88e5; /* أزرق فاتح لأسماء المواد */
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+
+        .teachers {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .teachers .box {
+            background: #0d47a1; /* أزرق داكن للمربعات */
+        }
+
+        .teachers .box:hover {
+            background-color: #3b8d99; /* تغيير اللون عند التمرير */
+        }
+
+        footer {
+            background-color: #143d60; /* أزرق داكن */
+            text-align: center;
+            padding: 6px 0;
+            font-size: 9px;
+            color: white;
+            margin-top: auto;
+            border-top: 2px solid #0d47a1; /* أزرق داكن */
+        }
+
+        .title-box {
+            background: white; /* خلفية بيضاء للجملة */
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }

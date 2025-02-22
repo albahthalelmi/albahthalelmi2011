@@ -1,0 +1,119 @@
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("https://media-hosting.imagekit.io//7fb221d8cf804e4d/WhatsApp%20Image%202025-02-09%20at%206.31.54%20PM.jpeg?Expires=1833818582&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dLUnwDLjL24MMmzZTrXK7-FT6Qx12vZ3vpGWd9QFShA7O5Ws3-iMJyfIZB7B1v60Ai~IRRPNTuZ-1HFnMCCJ9j-bb88fMtd1XBo4c42dsuOAa7e5igOgFf4zXmR2QqSxQiTyhB0JwbmI3OLPgdqFC11lygN36gbkjfKAXCd5~KYQavvXXT9NLMff9gKP-Fze1y8FAWL4ctcwu4Ep1miVeRSIyEfvq32DAmn~RlMfarNUBoBHW~bAVZI8ADqMi0xEQetjov-VqvNKPyjdH~ur00Yy83mm7wezLiT~wfpMfP2GCcz~pg6VTRCshNMD1FJ3080wXrP5PpFrlVFTW7ctCw__") no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* تنسيق الهيدر */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* تنسيق الشعار */
+        .logo img {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* تنسيق روابط النافبار */
+        .nav-links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            gap: 50px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #143D60;
+        }
+
+        /* القائمة الجانبية */
+        .list-container {
+            position: relative;
+        }
+
+        .list-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .list-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background: rgba(20, 61, 96, 0.8); /* اللون الذي طلبته */
+            color: #fff;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 220px;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+            border: 2px solid #143D60; /* إضافة خط حول القائمة */
+        }
+
+        .list-content.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .list-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-content ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ffffff; /* إضافة خط بين العناصر */
+        }
+
+        .list-content ul li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 8px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .list-content ul li a:hover {
+            color: #143D60;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* تنسيق الفوتر */
+        footer {
+            background-color: rgba(20, 61, 96, 0.8);
+            text-align: center;
+            padding: 6px 0;
+            font-size: 9px;
+            color: white;
+            margin-top: auto;
+            border-top: 2px solid #143D60; /* إضافة خط فوق الفوتر */
+        }
